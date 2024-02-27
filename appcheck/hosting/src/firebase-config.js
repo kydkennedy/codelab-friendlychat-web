@@ -6,14 +6,28 @@
  * 3. Select Config from the Firebase SDK snippet pane.
  * 4. Copy the config object snippet, then add it here.
  */
-const config = {
-  apiKey: "AIzaSyCsPiMQWrMWQKB0PrQDfHbxokTcR4TRxGc",
-  authDomain: "qs-nohe-fb-func.firebaseapp.com",
-  projectId: "qs-nohe-fb-func",
-  storageBucket: "qs-nohe-fb-func.appspot.com",
-  messagingSenderId: "668582889497",
-  appId: "1:668582889497:web:daa041767d60d39b964288"
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDcAqaNCTcUkbxEslRGWW9bxcLvd0UoghM",
+  authDomain: "yu-yu-chatusho.firebaseapp.com",
+  projectId: "yu-yu-chatusho",
+  storageBucket: "yu-yu-chatusho.appspot.com",
+  messagingSenderId: "284065659763",
+  appId: "1:284065659763:web:d71350f1186be40b94e306",
+  measurementId: "G-FKZTSCRZTT"
 };
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 export function getFirebaseConfig() {
   if (!config || !config.apiKey) {
